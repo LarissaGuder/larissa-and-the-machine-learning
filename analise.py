@@ -15,7 +15,7 @@ moda, quantidade = mode(banda)
 print('A moda é a categoria "{}". Quantidade de repetições: {}'.format(
     moda[0], quantidade))
 
-listNumeros = [5, 40, 1, 13, 18, 15, 13, 14]
+listNumeros = np.array([5, 40, 1, 13, 18, 15, 13, 14])
 
 # Calcular a média
 print('A média é ', np.mean(listNumeros))
@@ -40,3 +40,6 @@ print('O percentil 50% é ', np.percentile(listNumeros, 50))
 #                        IQR
 plt.boxplot(listNumeros)
 plt.show()
+
+# Calculo de intervalo
+print('O intervalo é ', listNumeros.max() - listNumeros.min())
