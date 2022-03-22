@@ -2,7 +2,7 @@ import numpy as np
 from scipy.stats import mode
 from scipy.stats import trim_mean
 from scipy.stats import skew
-
+from scipy.stats import kurtosis
 import matplotlib.pyplot as plt
 
 # >>>> Exemplo de cálculo de frequência
@@ -59,3 +59,8 @@ print('O desvio padrão correção de Bessel é ', round(listNumeros.std(), 2))
 # Obliquidade (skew): mede a simetria da distribuição em torno da média
 # Para normalização bias=True
 print('A obliquidade é ', round(skew(listNumeros, bias=True), 3))
+
+# Curtose (Kurtosis): Mede o formato (achatamento) da distribuição
+
+print('Curtose com subtração de fisher é ', round(kurtosis(listNumeros, fisher=True), 2))
+print('Curtose sem subtração de fisher é ', round(kurtosis(listNumeros, fisher=False), 2))
