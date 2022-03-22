@@ -47,5 +47,9 @@ print('O intervalo é ', listNumeros.max() - listNumeros.min())
 
 # variancia
 # Medida preferida para análise de espelhamento
-print('A variancia com correção de Bessel é ', listNumeros.var(ddof=1))
-print('A variancia sem correção de Bessel é ', listNumeros.var())
+print('A variancia com correção de Bessel é ', round(listNumeros.var(ddof=1), 2))
+print('A variancia sem correção de Bessel é ', round(listNumeros.var(), 2))
+
+# Desvio padrão
+print('O desvio padrão com correção de Bessel é ', round(listNumeros.std(ddof=1), 2))
+print('O desvio padrão correção de Bessel é ', round(listNumeros.std(), 2))
