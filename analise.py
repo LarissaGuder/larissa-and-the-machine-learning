@@ -26,3 +26,6 @@ print('A mediana é ', np.median(listNumeros))
 # Ela minimiza problema da média (outliers) descartando valores dos extremos
 # Eliminar 20% (0.2) dos valores em cada extremidade
 print('A média podada é ', trim_mean(listNumeros, 0.2))
+
+# Calcular Percentil
+print('O percentil 50% é ', np.percentile(listNumeros, 50))
