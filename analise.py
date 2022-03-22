@@ -39,7 +39,13 @@ print('O percentil 50% é ', np.percentile(listNumeros, 50))
 # flier             <----------->            fliers
 #                        IQR
 plt.boxplot(listNumeros)
-plt.show()
+# plt.show()
 
 # Calculo de intervalo
+# Sofre com outliers
 print('O intervalo é ', listNumeros.max() - listNumeros.min())
+
+# variancia
+# Medida preferida para análise de espelhamento
+print('A variancia com correção de Bessel é ', listNumeros.var(ddof=1))
+print('A variancia sem correção de Bessel é ', listNumeros.var())
