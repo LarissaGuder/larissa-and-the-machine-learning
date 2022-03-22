@@ -1,6 +1,8 @@
 import numpy as np
 from scipy.stats import mode
 from scipy.stats import trim_mean
+from scipy.stats import skew
+
 import matplotlib.pyplot as plt
 
 # >>>> Exemplo de cálculo de frequência
@@ -53,3 +55,7 @@ print('A variancia sem correção de Bessel é ', round(listNumeros.var(), 2))
 # Desvio padrão
 print('O desvio padrão com correção de Bessel é ', round(listNumeros.std(ddof=1), 2))
 print('O desvio padrão correção de Bessel é ', round(listNumeros.std(), 2))
+
+# Obliquidade (skew): mede a simetria da distribuição em torno da média
+# Para normalização bias=True
+print('A obliquidade é ', round(skew(listNumeros, bias=True), 3))
