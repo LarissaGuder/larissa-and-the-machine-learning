@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.stats import mode
+from scipy.stats import trim_mean
 
 # >>>> Exemplo de cálculo de frequência
 banda = np.array(['Fresno', 'Cuscobayo', 'Fresno', 'Fresno',
@@ -20,3 +21,8 @@ print('A média é ', np.mean(listNumeros))
 
 # Calcular a mediana
 print('A mediana é ', np.median(listNumeros))
+
+# Calcular média Podada
+# Ela minimiza problema da média (outliers) descartando valores dos extremos
+# Eliminar 20% (0.2) dos valores em cada extremidade
+print('A média podada é ', trim_mean(listNumeros, 0.2))
