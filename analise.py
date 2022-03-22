@@ -13,6 +13,10 @@ moda, quantidade = mode(banda)
 print('A moda é a categoria "{}". Quantidade de repetições: {}'.format(
     moda[0], quantidade))
 
-# Calcular a média
 listNumeros = [5, 40, 1, 13, 18, 15, 13, 14]
+
+# Calcular a média
 print('A média é ', np.mean(listNumeros))
+
+# Calcular a mediana
+print('A mediana é ', np.median(listNumeros))
