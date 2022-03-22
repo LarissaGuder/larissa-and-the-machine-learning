@@ -12,3 +12,7 @@ print('Frequência da categoria "Fresno" é ', frequencia)
 moda, quantidade = mode(banda)
 print('A moda é a categoria "{}". Quantidade de repetições: {}'.format(
     moda[0], quantidade))
+
+# Calcular a média
+listNumeros = [5, 40, 1, 13, 18, 15, 13, 14]
+print('A média é ', np.mean(listNumeros))
