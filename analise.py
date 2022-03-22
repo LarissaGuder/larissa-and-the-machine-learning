@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.stats import mode
 from scipy.stats import trim_mean
+import matplotlib.pyplot as plt
 
 # >>>> Exemplo de cálculo de frequência
 banda = np.array(['Fresno', 'Cuscobayo', 'Fresno', 'Fresno',
@@ -29,3 +30,13 @@ print('A média podada é ', trim_mean(listNumeros, 0.2))
 
 # Calcular Percentil
 print('O percentil 50% é ', np.percentile(listNumeros, 50))
+
+# Boxplot
+#      Q1-1.5IQR   Q1   median  Q3   Q3+1.5IQR
+#                   |-----:-----|
+#   o      |--------|     :     |--------|    o  o
+#                   |-----:-----|
+# flier             <----------->            fliers
+#                        IQR
+plt.boxplot(listNumeros)
+plt.show()
