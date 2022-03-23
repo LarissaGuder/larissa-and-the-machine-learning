@@ -64,3 +64,10 @@ print('A obliquidade é ', round(skew(listNumeros, bias=True), 3))
 
 print('Curtose com subtração de fisher é ', round(kurtosis(listNumeros, fisher=True), 2))
 print('Curtose sem subtração de fisher é ', round(kurtosis(listNumeros, fisher=False), 2))
+
+matrizNumeros = np.array([[0, 4], [1, 3], [2, 2], [3, 1], [4, 0]])
+
+# Cálculo de covarância. Problema: não indica com clareza a intensidade do relacionamento
+# entre os pares de atributos
+print('Matriz de covariancia é ')
+print(np.cov(matrizNumeros, rowvar=False))
