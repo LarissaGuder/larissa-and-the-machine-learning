@@ -71,3 +71,11 @@ matrizNumeros = np.array([[0, 4], [1, 3], [2, 2], [3, 1], [4, 0]])
 # entre os pares de atributos
 print('Matriz de covariancia é ')
 print(np.cov(matrizNumeros, rowvar=False))
+
+# Correlação (Pearson):
+# Varia entre -1 e 1, magniitudes dos vetores são desprezadas
+# ao se normalizar pelos desvios
+pearsonj = np.array([1, -3, 0, 4, 1, 0, 3])
+pearsonx = np.array([0, 1, 4, -2, 3, -1, 4])
+print('A correlação de pearson é ')
+print(np.corrcoef(pearsonj,pearsonx))
